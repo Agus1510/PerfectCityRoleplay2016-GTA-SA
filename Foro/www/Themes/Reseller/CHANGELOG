@@ -1,0 +1,81 @@
+Changelog:
+
+2015-05-12:
+ - Version 1.0.0
+ - Switched to new "No CAPTCHA reCAPTCHA" (see http://goo.gl/eX85TW)
+
+2014-01-26:
+ - Version 0.9.9
+ - Updated to use google.com URLs
+ - Using the SSL reCAPTCHA URLs by default to fix mixed-mode issues on SSL
+   websites.
+
+2011-06-30:
+ - Updated key creation URL
+ - Added Spanish language
+ - Added German language
+ - Fixed styles other than "Clean" displaying with left alignment
+
+2011-06-18:
+ - Version 0.9.8a
+ - Updated reCAPTCHA library
+ - Marked as compatible with SMF 2.0
+
+2010-03-13:
+ - Version 0.9.8
+ - Updated to work with 2.0 RC3
+ - Fixed display issue with 2.0 RC3
+
+2009-11-14:
+ - Version 0.9.7
+ - Updated to work with 2.0 RC2 and Curve
+ - Dropped support for 2.0 pre-release versions older than RC2
+
+2009-07-19:
+ - Version 0.9.6
+ - Updated to indicate support for 2.0 RC1.2
+
+2009-07-05:
+ - Fixed validation errors on SMF 1.1 series and old tabled Core for early SMF
+   2.0 betas
+ - Hopefully removed all the undefined indexes in the code
+
+2009-02-19:
+ - Version 0.9.5.4b
+ - Updated to install on 2.0 RC1-1
+
+2009-02-19:
+ - Version 0.9.5.4a
+ - Updated to install directly on 2.0 RC1
+
+2008-12-27
+ - Version 0.9.5.4
+ - Fixed bug causing undefined index errors (BT #19)
+ - Fixed mis-named variables
+ - Small code cleanup for 2.0b3 and newer
+ - Updated README to include 2.0 setting location
+
+2008-09-17
+ - Version 0.9.5.3
+ - Updated to support all 1.1 sub-versions. It doesn't look like there will be
+   major changes in the affected areas.
+ - Updated for SMF 2.0 Beta 4
+
+2008-07-18
+ - Version 0.9.5.2
+ - Added support for SMF 2.0 Beta 3 and 3.1. As a result, we now fully replace
+   the traditional visual verification when enabled.
+
+2008-05-20
+ - Version 0.9.5.1
+ - Fixed to support SMF 1.1.5
+
+2008-02-09
+ - Version 0.9.5
+ - Fixed issue with non-JavaScript reCAPTCHA display
+ - Added British English, and UTF-8 support for English and British English
+ - Added support for 2.0 Beta 1, Beta 1.1, Beta 2, Beta 2.1
+
+2007-12-27
+ - Version 0.9
+ - Initial Release

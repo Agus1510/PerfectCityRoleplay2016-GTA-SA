@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478641086 < time()) $expired = true; else{$expired = false; $value = 's:21:"ip-111-154.tricom.net";';}?>

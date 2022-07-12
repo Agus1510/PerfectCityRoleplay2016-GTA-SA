@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478632234 < time()) $expired = true; else{$expired = false; $value = 's:27:"191-81-68-115.speedy.com.ar";';}?>

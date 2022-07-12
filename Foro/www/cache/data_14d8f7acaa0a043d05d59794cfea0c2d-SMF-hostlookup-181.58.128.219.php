@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478577915 < time()) $expired = true; else{$expired = false; $value = 's:34:"Static-IP-18158128219.cable.net.co";';}?>

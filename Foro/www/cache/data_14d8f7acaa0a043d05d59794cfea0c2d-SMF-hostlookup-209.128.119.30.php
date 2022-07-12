@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478719585 < time()) $expired = true; else{$expired = false; $value = 's:27:"209-128-119-030.bayarea.net";';}?>

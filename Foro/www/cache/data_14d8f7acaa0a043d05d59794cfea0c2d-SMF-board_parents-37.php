@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478712001 < time()) $expired = true; else{$expired = false; $value = 'a:1:{i:37;a:4:{s:3:"url";s:46:"http://perfectcity-rp.com/index.php?board=37.0";s:4:"name";s:8:"Gamemode";s:5:"level";s:1:"0";s:10:"moderators";a:0:{}}}';}?>

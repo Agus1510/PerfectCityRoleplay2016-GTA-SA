@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478693509 < time()) $expired = true; else{$expired = false; $value = 's:31:"spider-87-250-244-15.yandex.com";';}?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478712181 < time()) $expired = true; else{$expired = false; $value = 's:41:"baiduspider-180-76-15-145.crawl.baidu.com";';}?>

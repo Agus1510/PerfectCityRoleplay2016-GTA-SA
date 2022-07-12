@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478662318 < time()) $expired = true; else{$expired = false; $value = 's:34:"186-91-172-98.genericrev.cantv.net";';}?>

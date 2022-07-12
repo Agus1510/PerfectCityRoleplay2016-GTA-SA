@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478704170 < time()) $expired = true; else{$expired = false; $value = 's:43:"cpe-181-47-30-62.telecentro-reversos.com.ar";';}?>

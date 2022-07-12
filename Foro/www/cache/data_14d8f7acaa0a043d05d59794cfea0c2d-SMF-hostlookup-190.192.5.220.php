@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478726358 < time()) $expired = true; else{$expired = false; $value = 's:30:"220-5-192-190.cab.prima.net.ar";';}?>

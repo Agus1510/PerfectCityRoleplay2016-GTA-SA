@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>motokochan:recaptchaforsmf</id>
+	<name>Visual Verification Options</name>
+
+	<file name="$sourcedir/ManageSettings.php">
+		<operation>
+			<search position="after"><![CDATA[
+			// Clever Thomas, who is looking sheepy now? Not I, the mighty sword swinger did say.
+			array('title', 'setup_verification_questions'),
+]]></search>
+			<add><![CDATA[
+			// reCAPTCHA
+			array('title', 'recaptcha_configure'),
+			array('desc', 'recaptcha_configure_desc', 'class' => 'windowbg'),
+				array('check', 'recaptcha_enabled', 'subtext' => $txt['recaptcha_enable_desc']),
+				array('text', 'recaptcha_public_key'),
+				array('text', 'recaptcha_private_key'),
+				array('select', 'recaptcha_theme', array('light' => $txt['recaptcha_theme_light'],
+									 'dark' => $txt['recaptcha_theme_dark'], )),
+]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/Subs-Editor.php">
+		<operation>
+			<search position="replace"><![CDATA[
+		if ($thisVerification['show_visual'] && (empty($_REQUEST[$verificationOptions['id'] . '_vv']['code']) || empty($_SESSION[$verificationOptions['id'] . '_vv']['code']) || strtoupper($_REQUEST[$verificationOptions['id'] . '_vv']['code']) !== $_SESSION[$verificationOptions['id'] . '_vv']['code']))
+]]></search>
+			<add><![CDATA[
+		if(!empty($modSettings['recaptcha_enabled']) && ($modSettings['recaptcha_enabled'] == 1 && !empty($modSettings['recaptcha_public_key']) && !empty($modSettings['recaptcha_private_key'])))
+		{
+
+			require_once("$sourcedir/recaptchalib.php");
+
+			$reCaptcha = new ReCaptcha($modSettings['recaptcha_private_key']);
+
+			// Was there a reCAPTCHA response?
+			if(isset($_POST["g-recaptcha-response"]))
+			{
+				$resp = $reCaptcha->verifyResponse( $_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"] );
+
+				if (!$resp->success)
+					fatal_lang_error('error_wrong_verification_code', false);
+			}
+			else
+				fatal_lang_error('error_wrong_verification_code', false);
+		}
+		elseif ($thisVerification['show_visual'] && (empty($_REQUEST[$verificationOptions['id'] . '_vv']['code']) || empty($_SESSION[$verificationOptions['id'] . '_vv']['code']) || strtoupper($_REQUEST[$verificationOptions['id'] . '_vv']['code']) !== $_SESSION[$verificationOptions['id'] . '_vv']['code']))
+]]></add>
+		</operation>
+	</file>
+
+</modification>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478650398 < time()) $expired = true; else{$expired = false; $value = 's:35:"customer-CLN-127-171.megared.net.mx";';}?>

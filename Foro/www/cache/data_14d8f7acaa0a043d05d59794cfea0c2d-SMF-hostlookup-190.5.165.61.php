@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1478639549 < time()) $expired = true; else{$expired = false; $value = 's:38:"customer-190-5.165-61.megacable.com.ar";';}?>
